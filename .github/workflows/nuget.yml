@@ -1,9 +1,10 @@
-name: "Deploy to NuGet"
+name: .NET
 
 on:
   push:
-    tags:
-    - 'v*'
+    branches: [ "nuget" ]
+  pull_request:
+    branches: [ "nuget" ]
 
 env:
   PROJECT_PATH: 'PasswordBoxMVVM/PasswordBoxMVVM.csproj'
